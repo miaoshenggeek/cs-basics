@@ -1,0 +1,20 @@
+To get binary negative integers, minus 8 from 0, binary equation is:
+  ００００００００
+－００００１０００
+－－－－－－－－－
+          
+0 is not enought to deduct from,so borrow 1 from the an imaginary 9-th to the leftmost bit, which is discarded by 8-bit computer automatically because of overflow.
+１００００００００
+－００００１０００
+－－－－－－－－－
+　１１１１１０００
+ it is obvious that, 100000000 = 11111111 + 1
+ the above equation is equivalent to:
+  １１１１１１１１
+－００００１０００
+－－－－－－－－－
+　１１１１０１１１
+＋０００００００１
+－－－－－－－－－
+　１１１１１０００
+ that is is how we caculate 2's complement: shift 0->1 and 1->0, then add 1.
